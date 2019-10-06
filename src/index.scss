@@ -1,0 +1,61 @@
+// sushi color theme :)
+// https://www.canva.com/colors/color-palettes/salmon-sushi/
+$navy: rgb(151, 215, 228);
+$freesia: #EFE7BC;
+$orange: #FFA384;
+$aqua:#E7F2F8;
+
+html {
+  background-color: $aqua;
+}
+// body, html {
+//   margin: 0;
+//   padding: 0;
+// }
+table {
+  // position: absolute;
+  // align-content: space-around;
+  margin: 1em auto; // 1em not needed
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 3px solid #ddd;
+  width: 80%;
+  // border-collapse: separate;
+  border-collapse: collapse;
+  border-radius:15px;
+  overflow: hidden;
+  // box-shadow: 10px 10px 8px 10px #888888;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+              0px 10px 20px rgba(0,0,0,0.05),
+              0px 20px 20px rgba(0,0,0,0.05),
+              0px 30px 20px rgba(0,0,0,0.05);
+}
+td, th {
+  border-bottom: 1px solid #ddd;
+  // border: 1px solid #ddd; (for column margin)
+  padding: 8px;
+  color: $orange;
+}
+table tr:nth-child(odd){background-color: $navy;}
+table tr:nth-child(even){background-color: #E7F2F8;}
+table tr:hover {background-color: #EFE7BC;}
+
+h1 {
+    color: $orange;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.5rem;
+  
+    &:before {
+      content: '👋';
+      display: inline-block;
+      transform: rotate(-20deg);
+      animation: wave .75s infinite linear alternate;
+    }
+}
+
+@keyframes wave {
+    100% {
+        transform: rotate(20deg);
+    }
+}
